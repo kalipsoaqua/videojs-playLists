@@ -32,7 +32,7 @@ function playList(options,arg){
       player.pl.getVideoSource = options.getVideoSource;
     }
 
-    player.pl._addVideos(videos);
+    player.pl._addVideos(JSON.parse(JSON.stringify(videos)));
   };
 
   player.pl._updatePoster = function(posterURL) {
